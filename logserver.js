@@ -1,32 +1,13 @@
-var express  = require('express'),
-    app = express(),
-    mongoose = require('mongoose'), 
-    Schema = mongoose.Schema,
-    priority = ['low', 'normal', 'high', 'critical'],
-    logtype = ['information', 'warning' ,'error'];
+var debug = require('debug')('restapi');
 
-mongoose.connect('mongodb://localhost/test');
+var libs = process.cwd() + '/libs/';
+var config = require(libs + 'config');
+var log = require(libs + 'log')(module);
+var app = require(libs + 'app');
 
-logItem = new Schema({
-   priority  : Number,
-   logtype   : Number,
-   datetime  : Date,
-   msg       : String
+app.set('port', config.get('port'));
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + app.get('port'));
+  log.info('Express server listening on port ' + app.get('port'));
 });
-
-mongoose.model('logItem', logItem);
-
-app.get('/', function(req, res){
-  res.send("Log saved on " + Date());
-  console.log("Log saved on " + Date());  
-
-  var reqQuery = req.query;
-  var logItem = mongoose.model('logItem');
-
-  var pr = priority.indexOf(reqQuery["priority"])
-  var type = logtype.indexOf(reqQuery["type"]);
-
-  new logItem({datetime: Date(), priority: (pr >= 0 ? pr : 0), logtype: (type >= 0 ? type : 0), msg: reqQuery["msg"]}).save();
-});
-
-app.listen(8082);

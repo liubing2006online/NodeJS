@@ -1,0 +1,11 @@
+{"level":"info","message":"Express server listening on port 8082","timestamp":"2017-01-14T10:17:09.716Z"}
+{"level":"error","message":"Connection error: failed to connect to server [localhost:27017] on first connect","timestamp":"2017-01-14T10:17:09.731Z"}
+{"level":"info","message":"Express server listening on port 8082","timestamp":"2017-01-14T10:22:28.569Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2017-01-14T10:22:28.595Z"}
+{"level":"error","message":"POST 500 LogItem is not defined","timestamp":"2017-01-14T10:30:35.976Z"}
+{"level":"info","message":"Express server listening on port 8082","timestamp":"2017-01-14T10:31:17.597Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2017-01-14T10:31:17.626Z"}
+{"level":"error","message":"POST 500 UserLog.save is not a function","timestamp":"2017-01-14T10:31:21.715Z"}
+{"level":"info","message":"Express server listening on port 8082","timestamp":"2017-01-14T10:32:40.287Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2017-01-14T10:32:40.311Z"}
+{"level":"info","message":"New LogItem created with user id: 1","timestamp":"2017-01-14T10:32:44.480Z"}

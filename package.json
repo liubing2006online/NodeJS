@@ -1,0 +1,27 @@
+{
+  "name": "logservice",
+  "version": "1.0.0",
+  "description": "log service",
+  "main": "logserver.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "mongoose": "^4.7.6",
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "multer": "^1.2.1",
+    "debug": "~2.0.x",
+    "nconf": "^0.6.x",
+    "winston": "^0.8.x",
+    "method-override": "^2.3.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "server"
+  ],
+  "author": "banson liu",
+  "license": "ISC"
+}
